@@ -67,11 +67,10 @@ def q8
   programming_languages = %w(ruby php python javascript)
 
   # 以下に回答を記載
-  upper_case_programming_languages = Array.new ["ruby", "php", "python", "javascript"]
-  upper_case_programming_languages[0].upcase!
-  upper_case_programming_languages[1].upcase!
-  upper_case_programming_languages[2].upcase!
-  upper_case_programming_languages[3].upcase!
+  upper_case_programming_languages = %w(ruby php python javascript)
+  upper_case_programming_languages.map {|languages1|languages1.upcase!}
+
+  programming_languages.map {|languages2|languages2.capitalize!}
 
   # 以下は変更しないで下さい
   p programming_languages
