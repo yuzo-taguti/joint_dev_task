@@ -89,7 +89,7 @@ def q10
   foods = %w(いか たこ うに しゃけ うにぎり うに軍艦 うに丼)
 
   # 以下に回答を記載
-  p foods.include?("うに")?  "好物です" : "まぁまぁ好きです";
+  puts foods.include?("うに")?  "好物です" : "まぁまぁ好きです";
 
 end
 
@@ -127,6 +127,7 @@ def q14
   # 以下に回答を記載
   array = data.keys
   p array
+
 end
 
 def q15
@@ -134,6 +135,8 @@ def q15
   data2 = { name: "yamada", hobby: "baseball", role: "normal" }
 
   # 以下に回答を記載
+  puts data1.key?(:age)? "OK" : "NG" ;   
+  puts data2.key?(:age)? "OK" : "NG" ; 
 
 end
 
@@ -146,6 +149,10 @@ def q16
   ]
 
   # 以下に回答を記載
+
+  users.each do |info|
+    puts "「私の名前は#{info[:name]}です。年齢は#{info[:age]}:歳です。」"
+  end
 
 end
 
