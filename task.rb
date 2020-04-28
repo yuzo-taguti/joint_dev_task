@@ -158,17 +158,19 @@ end
 
 class UserQ17
   # 以下に回答を記載
-  attr_accessor :name,:age, :gender
 
-  def initialize(name:, age:, gender:)
-    @name = name
-    @age = age
-    @gender = gender
-    
+  def initialize(**params)
+    @name = params[:name]
+    @age = params[:age]
+    @gender = params[:gender]    
   end
 
   def info
-    puts("名前:" + @name.to_s, "年齢:" + @age.to_s, "性別:" + @gender.to_s)
+    puts <<~EOS
+      名前:#{@name}
+      年齢:#{@age}
+      性別:#{@gender}
+    EOS
   end
 
 end
