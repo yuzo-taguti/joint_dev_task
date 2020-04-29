@@ -187,6 +187,17 @@ end
 
 class UserQ18
   # 以下に回答を記載
+ 
+  def initialize(**params)
+    @name = params[:name]
+    @age = params[:age]
+  end
+
+  def introduce
+    return "はいさいまいど〜，ゆたぼんです！！！" if @age == 10
+      puts "こんにちは，#{@name}と申します。宜しくお願いいたします。"
+
+  end
 
 end
 
