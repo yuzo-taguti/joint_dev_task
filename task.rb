@@ -215,10 +215,12 @@ end
 class Item
   # 以下を修正して下さい
 
-  attr_accessor :name
-
   def initialize(params)
     @name = params[:name]
+  end
+
+  def name
+    @name
   end
 
 end
@@ -238,8 +240,7 @@ class Zoo
   # 以下に回答を記載
 
 end
-
-
+  
 def q20
   # ここは変更しないで下さい（動物園・ユーザー情報は変更していただいてOKです）
   zoo = Zoo.new(name: "旭山動物園", entry_fee: { infant: 0, children: 400, adult: 800, senior: 500 })
