@@ -194,9 +194,11 @@ class UserQ18
   end
 
   def introduce
-    return "はいさいまいど〜，ゆたぼんです！！！" if @age == 10
+    if @age <=18
+      return "はいさいまいど〜，#{@name}です！！！" 
+    elsif @age >= 19   
       puts "こんにちは，#{@name}と申します。宜しくお願いいたします。"
-
+    end
   end
 
 end
@@ -213,9 +215,14 @@ end
 class Item
   # 以下を修正して下さい
 
+  attr_accessor :name
+
   def initialize(name)
     @name = name
   end
+
+
+
 end
 
 def q19
