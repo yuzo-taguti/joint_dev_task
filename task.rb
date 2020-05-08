@@ -243,7 +243,6 @@ end
 
 class Zoo
   # 以下に回答を記載
-  attr_writer :name,:entry_fee
 
   def initialize(**params)
     @name = params[:name]
